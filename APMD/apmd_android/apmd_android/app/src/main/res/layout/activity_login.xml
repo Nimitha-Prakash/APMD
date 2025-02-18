@@ -1,0 +1,149 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/nimi"
+    tools:context=".Login" >
+
+
+
+    <ImageView
+        android:layout_width="235dp"
+        android:layout_height="207dp"
+        android:layout_marginTop="35dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/www" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#032068"
+        android:textSize="55dp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:text="welcome"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#032068"
+        android:textSize="16.7dp"
+        android:layout_marginBottom="30dp"
+        android:text="Sign in to continue"/>
+
+
+       <com.google.android.material.textfield.TextInputLayout
+           android:id="@+id/filledTextField"
+           style="@style/CustomTextInputLayout"
+           android:layout_width="300dp"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="32dp"
+           android:layout_marginEnd="32dp"
+           android:layout_gravity="center"
+
+           android:textColorHint="#000"
+           android:hint="Enter Username"
+           android:background="@drawable/rounded_corner_background">
+
+           <!-- TextInputEditText -->
+           <com.google.android.material.textfield.TextInputEditText
+               android:id="@+id/editText1"
+               android:layout_width="300dp"
+               android:layout_height="50dp"
+               android:layout_marginTop="20dp"
+               android:textColor="#032068"
+               android:inputType="text"
+               android:ems="10"/>
+       </com.google.android.material.textfield.TextInputLayout>
+<!--       <EditText-->
+<!--           android:id="@+id/editText1"-->
+<!--           android:layout_marginTop="20dp"-->
+<!--           android:hint="Username"-->
+<!--           android:textColor="@color/white"-->
+<!--           android:textColorHint="@color/white"-->
+<!--           android:layout_width="match_parent"-->
+<!--           android:layout_height="wrap_content" >-->
+
+<!--           <requestFocus />-->
+<!--       </EditText>-->
+
+       <com.google.android.material.textfield.TextInputLayout
+           android:id="@+id/filledTextField1"
+           style="@style/CustomTextInputLayout"
+           android:layout_width="300dp"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="32dp"
+           android:layout_marginTop="10dp"
+           android:layout_gravity="center"
+
+           android:layout_marginEnd="32dp"
+           android:textColorHint="#000"
+           android:hint="Enter Password"
+           android:background="@drawable/rounded_corner_background">
+
+           <!-- TextInputEditText -->
+           <com.google.android.material.textfield.TextInputEditText
+               android:id="@+id/editText2"
+               android:layout_width="300dp"
+               android:layout_height="50dp"
+               android:layout_marginTop="20dp"
+               android:textColor="#032068"
+               android:inputType="text"
+               android:ems="10"/>
+       </com.google.android.material.textfield.TextInputLayout>
+<!--       <EditText-->
+<!--           android:id="@+id/editText2"-->
+<!--           android:hint="Password"-->
+<!--           android:textColor="#C1B5B5"-->
+<!--           android:textColorHint="@color/white"-->
+<!--           android:layout_width="match_parent"-->
+<!--           android:layout_height="wrap_content"-->
+<!--           android:ems="10"-->
+<!--           android:inputType="textPassword" />-->
+
+<!--       <androidx.appcompat.widget.AppCompatButton-->
+<!--           android:id="@+id/button1"-->
+<!--           android:background="#192E1A"-->
+<!--           android:textColor="#FFFFFF"-->
+<!--           android:textStyle="bold"-->
+<!--           android:layout_gravity="center"-->
+<!--           android:layout_marginTop="20dp"-->
+<!--           android:layout_width="wrap_content"-->
+<!--           android:layout_height="wrap_content"-->
+<!--           android:text="Login" />-->
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button1"
+        android:layout_width="276dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:textColor="#fff"
+        android:background="@drawable/button_curve"
+        android:text="LOGIN"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#032068"
+        android:textSize="16.7dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:text="New User ?"/>
+
+<!--       <TextView-->
+<!--           android:layout_marginTop="20dp"-->
+<!--           android:layout_gravity="center"-->
+<!--           android:layout_width="wrap_content"-->
+<!--           android:layout_height="wrap_content"-->
+<!--           android:text="New User?Click Here.."-->
+<!--           android:textColor="@color/black"-->
+<!--           android:textAppearance="?android:attr/textAppearanceMedium" />-->
+
+
+   </LinearLayout>

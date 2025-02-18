@@ -1,0 +1,60 @@
+{%include 'teacher_header.html' %}
+<br><br><br><br><br>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> -->
+
+{%if data['up']%}
+    <center>
+        <h1>update </h1>
+        <form action="" method="post" >
+            <input type="text" name="input" value="{{data['up'][0]['Test_name']}}">
+            <br><br>
+            <input type="submit" name="update" class="btn btn-secondary" >
+           
+        </form></center>
+
+
+        {%else%}
+
+
+
+    <center>
+    <h1> Add a test </h1>
+    <form method="post" >
+        <input type="text" name="input">
+        <br><br>
+        <input type="submit" class="btn btn-warning" name="submit">
+       
+    </form></center>
+
+
+    <h1>Test Details</h1>
+        <table border="1" class="table">
+            <tr>
+            <th>Test_id</th>
+            <th>Teacher</th> 
+            <th>Test_name</th>
+            <th>Action</th>
+            </tr>
+        {% for i in data['view']%}
+        <tr>
+            <td>{{i['Test_id']}}</td>
+            <td>{{i['Fname']}}</td>
+            <td>{{i['Test_name']}}</td>
+            
+            <td><a href="?action=update&id={{i['Test_id']}}" class="btn btn-success">update</a>
+            <td><a href="?action=delete&id={{i['Test_id']}}" class="btn btn-danger">delete</a>
+            <td><a href="/manage_qstn?id={{i['Test_id']}}" class="btn btn-info">Add</a>
+        </tr>
+        {%endfor%}
+        </table>
+
+        {%endif%}
+<br><br><br><br><br><br><br><br>
+{%include 'footer.html' %}

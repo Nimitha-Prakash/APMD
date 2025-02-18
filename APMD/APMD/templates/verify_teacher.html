@@ -1,0 +1,48 @@
+{%include 'admin_header.html' %}
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>-->
+
+    <br><br><br><br><br>
+  <center>
+    <h1>Teacher Details</h1> 
+    <table border="1" class="table">
+        <tr>
+        <th>Teacher_id</th>
+        <th>Login_id</th> 
+        <th>First_name</th>
+        <th>last_name</th>
+        <th>phone</th>
+        <th>email</th>
+        <th>qualification</th>
+        <th>Action</th>
+        </tr>
+    {% for i in data['view']%}
+    <tr>
+        <td>{{i['Teacher_id']}}</td>
+        <td>{{i['Login_id']}}</td>
+        <td>{{i['Fname']}}</td>
+        <td>{{i['Lname']}}</td>
+        <td>{{i['phone']}}</td>
+        <td>{{i['email']}}</td>
+        <td>{{i['qualification']}}</td>
+
+        {%if i['user_type'] == 'pending' %}
+        <td><a href="?action=accept&id={{i['Login_id']}}" class="btn btn-success">Accept</a>
+        <td><a href="?action=reject&id={{i['Login_id']}}" class="btn btn-danger">Reject</a>
+        {%endif%}
+            
+
+    </tr>
+    {%endfor%}
+    </table>
+  </center>
+        <br><br><br><br><br><br><br><br>
+{%include 'footer.html' %}

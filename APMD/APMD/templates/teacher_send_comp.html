@@ -1,0 +1,56 @@
+{%include 'teacher_header.html' %}
+
+<br><br><br><br><br>
+<form action=""method="post">
+    <center>
+      <H1>COMPLAINTS</H1>
+      <table>
+
+    <tr>
+        
+        <th>Title</th>
+        <td><input type="text" name="title"></td></tr>
+        <tr>
+        <th>Description</th>
+        <td><textarea name="description" id="" cols="30" rows="10"></textarea></td>
+    </tr>
+    <tr>
+        <td  align="center" colspan="2"><input style="margin-left: -300px;" type="submit" value="SEND COMPLAINT" name="complaints" id=""></td>
+    
+        
+    </tr>
+
+
+    
+</table>
+
+</form>
+</table>
+
+
+<br>
+<h1>Reply</h1>
+<table border="1" class="table">
+    <tr>
+    <tr>
+        <th>Slno</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Reply</th>
+        <th>Date</th>
+        
+    </tr>
+    {%for i in data['u']%}
+    <tr>
+        <td>{{loop.index}}</td>
+        <td>{{i['Title']}}</td>
+        <td>{{i['Description']}}</td>
+        <td>{{i['Reply']}}</td>
+        <td>{{i['Date']}}</td>
+        
+    </tr>
+    {%endfor%}
+</table>
+</center>
+
+{%include 'footer.html' %}

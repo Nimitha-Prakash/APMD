@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/icon"
+        android:label="PronoCheck"
+        android:roundIcon="@drawable/icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Apmd_android"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".ViewResults"
+            android:exported="false" />
+        <activity
+            android:name=".View_questions"
+            android:exported="false" />
+        <activity
+            android:name=".View_test"
+            android:exported="false" />
+        <activity
+            android:name=".Record_Audio_file"
+            android:exported="false" />
+        <activity
+            android:name=".Ipsettings"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Homepage" />
+        <activity android:name=".Profile" />
+        <activity android:name=".SendComplaint" />
+        <activity android:name=".Register" />
+        <activity android:name=".Login" />
+        <activity android:name=".textspeech" />
+        <activity android:name=".Update_profile" />
+        <activity android:name=".Student_reading_exam" />
+    </application>
+
+</manifest>

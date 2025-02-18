@@ -1,0 +1,38 @@
+{%include 'admin_header.html' %}
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> -->
+    <br><br><br><br><br>
+    <h1>Participants</h1>
+    <table border="1" class="table">
+        <tr>
+        <th>Test_name</th>
+        <th>Question</th>
+        <th>Answer</th> 
+        <th>Student name</th>
+        <th>Student Answer</th>
+        <th>Mark</th>
+        <th>Date</th>
+        <!-- <th>Action</th> -->
+        </tr>
+    {% for i in data['view']%}
+    <tr>
+        <td>{{i['Test_name']}}</td>
+            <td>{{i['Question']}}</td>
+            <td>{{i['Answer']}}</td>
+            <td>{{i['fname']}}</td>
+            <td>{{i['Answer_text']}}</td>
+            <td>{{i['Mark']}}</td>
+            <td>{{i['Date']}}</td>
+
+        </tr>
+        {%endfor%}
+        </table>
+        <br><br><br><br><br><br><br><br><br><br>
+<!-- {%include 'footer.html' %} -->

@@ -1,0 +1,62 @@
+
+{%include 'teacher_header.html' %}
+<br><br><br><br><br>
+{%if data['up']%}
+    <center>
+        <h1>update </h1>
+        <form method="post" >
+            <input type="text" name="input" value="{{data['up'][0]['Question']}}">
+            <br>
+            <br>
+        <input type="text" name="ans" value="{{data['up'][0]['Answer']}}">
+
+        <br>
+            <br>
+            <input type="submit" class="btn btn-warning" name="update" >
+           
+        </form></center>
+
+
+        {%else%}
+       
+    <center>
+    <h1> Add a question </h1>
+    <form method="post" >
+       
+        <input type="text" name="input" placeholder="Question" style="margin-bottom: 20px;">
+        <br>
+        <input type="text" name="ans" placeholder="Answer">
+
+        <br>
+        <input type="submit" class="btn btn-warning" name="submit">
+           
+    </form></center>
+    
+    
+        
+    <h1>Questions Details</h1>
+        <table border="1" class="table">
+
+            <tr>
+            <th>Question_id</th>
+            <th>Test Name</th> 
+            <th>Question</th>
+            <th>Action</th>
+            </tr>
+        {% for i in data['view']%}
+        <tr>
+            <td>{{i['Question_id']}}</td>
+            <td>{{i['Test_name']}}</td>
+            <td>{{i['Question']}}</td>
+                
+            <td><a href="?action=update&id={{i['Question_id']}}" class="btn btn-warning">update</a>
+            <td><a href="?action=delete&id={{i['Question_id']}}" class="btn btn-warning">delete</a>
+            <td><a href="/view_answer?qid={{i['Question_id']}}">Answer</a></td>
+        
+        </tr>
+        {%endfor%}
+        </table>
+        {%endif%}
+
+
+        <!-- {%include 'footer.html' %} -->

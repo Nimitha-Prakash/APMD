@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/button_curve.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="#1A2538" /> <!-- Pressed state color -->
+            <corners android:radius="60dp" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="#2A364E" /> <!-- Default state color -->
+            <corners android:radius="60dp" />
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><h1>Test Details</h1>
+        <table border="1">
+            <tr>
+            <th>Test_id</th>
+            <th>Teacher_id</th> 
+            <th>Test_name</th>
+            <th>Action</th>
+            </tr>
+        {% for i in data['view']%}
+        <tr>
+            <td>{{i['Test_id']}}</td>
+            <td>{{i['Fname']}}</td>
+            <td>{{i['Test_name']}}</td>
+            
+            <td><a href="?action=update&id={{i['Test_id']}}">update</a>
+            <td><a href="?action=delete&id={{i['Test_id']}}">delete</a>
+            <td><a href="/manage_qstn?id={{i['Test_id']}}">Add</a>
+            
+                
+
+        </tr>
+        {%endfor%}
+        </table>
+</body>
